@@ -70,7 +70,9 @@ void suspend_power_down(void) {
     // on AVR, this enables the watchdog for 15ms (max), and goes to
     // SLEEP_MODE_PWR_DOWN
 
-    wait_ms(17);
+    //this makes led animation look little jerky during sleep for SN32
+    //question is wheather SN32 keyboard with leds will comply with USB power specs during suspend.
+    //wait_ms(17);
 }
 
 /** \brief suspend wakeup condition
